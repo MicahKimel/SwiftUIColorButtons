@@ -13,16 +13,14 @@ import SwiftUI
 import Combine
 
 @available(macOS 15.1, *)
-extension View {
+public extension View {
     
     dynamic func buttonStyleMint(enabled: @escaping () -> Bool = { true }) -> some View {
         ModifiedContent(content: self, modifier: ButtonStyle(color: Color.mint, enabled: enabled))
-        
     }
     
     dynamic func buttonStyleCharcoal(enabled: @escaping () -> Bool = { true }) -> some View {
         ModifiedContent(content: self, modifier: ButtonStyle(color: Color(hex: "565859"), enabled: enabled))
-        
     }
     
     dynamic func buttonStyleBlueDusk(enabled: @escaping () -> Bool = { true }) -> some View {
